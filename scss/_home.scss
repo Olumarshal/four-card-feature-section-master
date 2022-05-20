@@ -1,0 +1,21 @@
+.home {
+    height: 100%;
+    padding-top: 10vh;
+    width: 100vw;
+    overflow: scroll;
+    align-items: center;
+}
+
+.page-content {
+    text-align: $textAlign;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: $textAlign;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
