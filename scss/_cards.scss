@@ -4,52 +4,95 @@
   border-radius: 0.3rem;
 }
 
-.cards {
+section {
   margin: 50px auto 50px auto;
-  width: 300px;
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  grid-template-areas:
+    "one"
+    "two"
+    "three"
+    "four";
   gap: 30px;
 
-  .card-1 {
+  .card {
+    width: 300px;
+    height: auto;
+    margin: auto;
+  }
+
+  .one {
     @include card-property;
     border-top: 4px solid $primaryCyan;
+    grid-area: one;
   }
 
-  .card-2 {
+  .two {
     @include card-property;
     border-top: 4px solid $primaryRed;
+    grid-area: two;
   }
 
-  .card-3 {
+  .three {
     @include card-property;
     border-top: 4px solid $primaryOrange;
+    grid-area: three;
   }
 
-  .card-4 {
+  .four {
     @include card-property;
     border-top: 4px solid $primaryBlue;
+    grid-area: four;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 1rem;
+    color: $veryDarkBlue;
   }
 
   .card-content {
     line-height: 1.5;
-    font-size: 15px;
+    font-size: 0.9em;
     font-weight: 400;
     padding: 20px;
   }
 
-  p {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 13px !important;
-    font-weight: 400;
-  }
-
-  .card-image-1,
-  .card-image-2,
-  .card-image-3,
-  .card-image-4 {
+  .card-img {
     float: right;
     padding: 20px;
+  }
+}
+
+@media (max-width: 420px) {
+  .heading-paragraph {
+    width: 300px;
+    margin: 1rem auto 4rem auto;
+    height: auto;
+  }
+}
+
+@media (min-width: 420px) {
+  section {
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas:
+      ". two ."
+      "one two four"
+      "one three four"
+      ". three .";
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    inline-size: 80%;
+    justify-items: center;
+    margin-bottom: 50px;
+  }
+
+  .heading-paragraph {
+    text-align: center;
+    inline-size: auto;
+    font-size: 0.9rem;
+    padding: 0 30% 50px 30%;
   }
 }
