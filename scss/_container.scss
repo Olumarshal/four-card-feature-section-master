@@ -1,15 +1,14 @@
 .container {
-    height: 100%;
-    padding-top: 10vh;
-    align-items: center;
+  height: 100%;
+  padding-top: 10vh;
+  align-items: center;
 }
 
-
 .attribution {
-    font-size: 11px;
-    text-align: $textAlign;
-  }
+  font-size: 11px;
+  text-align: $textAlign;
+}
 
-  .attribution a {
-    color: hsl(228, 45%, 44%);
-  }
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}

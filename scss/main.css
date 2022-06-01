@@ -29,7 +29,10 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-      grid-template-areas: "one" "two" "three" "four";
+      grid-template-areas: "one"
+ "two"
+ "three"
+ "four";
   gap: 30px;
 }
 
@@ -45,8 +48,6 @@ section .one {
           box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   border-top: 4px solid #45d3d3;
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: one;
 }
 
@@ -56,8 +57,6 @@ section .two {
           box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   border-top: 4px solid #ea5353;
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: two;
 }
 
@@ -67,8 +66,6 @@ section .three {
           box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   border-top: 4px solid #fcaf4a;
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
   grid-area: three;
 }
 
@@ -78,8 +75,6 @@ section .four {
           box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.2);
   border-radius: 0.3rem;
   border-top: 4px solid #549ef2;
-  -ms-grid-row: 4;
-  -ms-grid-column: 1;
   grid-area: four;
 }
 
@@ -109,16 +104,25 @@ section .card-img {
   }
 }
 
-@media (min-width: 420px) {
+@media (min-width: 540px) {
+  .heading-paragraph {
+    width: 300px;
+    margin: 1rem auto 4rem auto;
+    height: auto;
+  }
+}
+
+@media (min-width: 700px) {
   section {
     margin: 0 auto;
     display: -ms-grid;
     display: grid;
-        grid-template-areas: ". two ." "one two four" "one three four" ". three .";
+        grid-template-areas: ". two ."
+ "one two four"
+ "one three four"
+ ". three .";
     gap: 30px;
-    -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    -ms-grid-rows: (1fr)[4];
         grid-template-rows: repeat(4, 1fr);
     inline-size: 80%;
     justify-items: center;
@@ -128,7 +132,11 @@ section .card-img {
     text-align: center;
     inline-size: auto;
     font-size: 0.9rem;
-    padding: 0 30% 50px 30%;
+    padding: 0 30% 0 30%;
+  }
+  .card {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
 

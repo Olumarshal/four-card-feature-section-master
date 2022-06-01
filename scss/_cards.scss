@@ -72,7 +72,15 @@ section {
   }
 }
 
-@media (min-width: 420px) {
+@media (min-width: 540px) {
+  .heading-paragraph {
+    width: 300px;
+    margin: 1rem auto 4rem auto;
+    height: auto;
+  }
+}
+
+@media (min-width: 700px) {
   section {
     margin: 0 auto;
     display: grid;
@@ -93,6 +101,11 @@ section {
     text-align: center;
     inline-size: auto;
     font-size: 0.9rem;
-    padding: 0 30% 50px 30%;
+    padding: 0 30% 0 30%;
+  }
+
+  .card {
+    margin-top: 0;
+    padding-top: 0;
   }
 }
